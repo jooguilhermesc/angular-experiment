@@ -1,0 +1,9 @@
+<div *ngIf="produto">
+	<h2>DETALHES DO PRODUTO: {{$any(produto).nome | uppercase}}</h2>
+	<div><span>id: </span>{{$any(produto).id}}</div>
+	<div>
+		<label for="nome-produto">Nome do produto: </label>
+		<input id="nome-produto" [(ngModel)]="$any(produto).nome" placeholder="Nome do Produto">
+	</div>
+	<button (click)="goBack()">Voltar</button>
+</div>

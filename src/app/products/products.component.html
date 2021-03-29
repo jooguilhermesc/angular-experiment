@@ -1,0 +1,9 @@
+<h2>Produtos cadastrados</h2>
+<ul class="produtos">
+	<li *ngFor="let produto of produtos">
+		<a routerLink="/detail/{{produto.id}}">
+			<span class="rastreador">{{produto.id}}</span> {{produto.nome}}
+		</a>
+		<button class="delete" title="deletar produto" (click)="delete(produto)">x</button>
+	</li>
+</ul>
